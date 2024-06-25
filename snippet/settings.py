@@ -125,8 +125,17 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# REST_FRAMEWORK = {
-# 'DEFAULT_PERMISSION_CLASSES': [
-# 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-# ]
-# }
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+]
+}
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://yourdomain.com',
+    'https://www.yourdomain.com',
+]
+
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = True
